@@ -1,3 +1,4 @@
+import { Outlet } from "react-router";
 import Navbar from "./components/Navbar";
 
 function Layout() {
@@ -5,7 +6,7 @@ function Layout() {
         <div>
             <Navbar></Navbar>
             <div className="bg-[#edf0f2]">
-                
+                <Outlet></Outlet>
             </div>
         </div>
     )

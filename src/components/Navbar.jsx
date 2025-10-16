@@ -30,7 +30,7 @@ function Navbar() {
                 </a>
             </div>
             <div className="navbar-end space-x-8 w-full">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 hidden lg:flex">
                     {links}
                 </ul>
                 <a className="btn">Login</a>

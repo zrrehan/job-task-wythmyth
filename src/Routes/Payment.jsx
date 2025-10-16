@@ -17,8 +17,8 @@ function Payment({ dataPromise }) {
     }
     return(
         <DataContext value={value}>
-            <div className="flex justify-center gap-10 mb-10">
-                <div className="bg-white px-20 rounded-2xl py-10">
+            <div className="flex flex-col lg:flex-row justify-center gap-10 mb-10">
+                <div className="bg-white lg:px-20 rounded-2xl py-10">
                     <h1 className="text-3xl font-semibold">1. Select Your Membership</h1>
                     <div className="divider"></div>
                     {
@@ -28,7 +28,7 @@ function Payment({ dataPromise }) {
                     }
                 </div>
 
-                <div className="bg-white px-20 rounded-2xl py-10">
+                <div className="bg-white lg:px-20 rounded-2xl py-10">
                     <h1 className="text-3xl font-semibold">2. Payment Method</h1>
                     <div className="divider"></div>
 

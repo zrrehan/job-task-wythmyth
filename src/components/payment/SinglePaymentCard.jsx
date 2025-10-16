@@ -17,8 +17,8 @@ function SinglePaymentCard({data}) {
         <div>
             <div
                 onClick={buttonClickedDetected}
-                className={`payment-btn btn flex px-5 rounded-2xl justify-between h-[60px] items-center w-[500px] bg-white py-3 ${titlePayment === data.title && "border border-[#002077] shadow-2xl"}`}>
-                <h1 className="text-lg">{data.title}</h1>
+                className={`payment-btn btn flex px-5 rounded-2xl justify-between h-[60px] items-center w-[90vw] mx-auto lg:w-[500px] bg-white py-3 ${titlePayment === data.title && "border border-[#002077] shadow-2xl"}`}>
+                <h1 className="lg:text-lg">{data.title}</h1>
                 <div className="h-[30px]">
                     <img src={data.Image} className="h-full rounded-xl" />
                 </div>

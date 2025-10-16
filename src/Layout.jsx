@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function Layout() {
     return(
@@ -8,6 +9,7 @@ function Layout() {
             <div className="bg-[#edf0f2] py-20">
                 <Outlet></Outlet>
             </div>
+            <Footer></Footer>
         </div>
     )
 }

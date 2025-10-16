@@ -3,7 +3,7 @@
         "type": "General Member",
         "options": [
             {
-                "name": "Membership Fee",
+                "name": "General Member Free",
                 "paymentType": "Free",
                 "installments": null,
                 "amount": 0.00
@@ -14,13 +14,13 @@
         "type": "Yearly Member",
         "options": [
             {
-                "name": "Membership Fee",
+                "name": "Yearly Member Yearly",
                 "paymentType": "Yearly",
                 "installments": null,
                 "amount": 120.00
             },
             {
-                "name": "Membership Fee",
+                "name": "Yearly Member 12 Installment",
                 "paymentType": "12 Installment",
                 "installments": 12,
                 "amount": 10.00
@@ -31,13 +31,13 @@
         "type": "Life Member",
         "options": [
             {
-                "name": "Membership Fee",
+                "name": "Life Member Upfront",
                 "paymentType": "Upfront / Advance",
                 "installments": null,
                 "amount": 500.00
             },
             {
-                "name": "Membership Fee",
+                "name": "Life Member 5 Installment",
                 "paymentType": "5 Installment",
                 "installments": 5,
                 "amount": 100.00

@@ -27,15 +27,14 @@
         "title": "Zelle (Scan to Pay)",
         "scan_to_pay": true
     },
-    
-    {
-        "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR6gMvAYCvX-YMermlbJ6U2H9YNqqBM0bUIg&s",
-        "title": "Cash",
-        "scan_to_pay": false
-    },
     {
         "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoMzvIvSl2JWOwf4T7fO4g5DanzM3roicGNg&s",
         "title": "Wire Transfer",
+        "scan_to_pay": true
+    },
+    {
+        "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR6gMvAYCvX-YMermlbJ6U2H9YNqqBM0bUIg&s",
+        "title": "Cash",
         "scan_to_pay": false
     }
 ]

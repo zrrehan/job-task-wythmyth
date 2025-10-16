@@ -5,7 +5,7 @@ function Layout() {
     return(
         <div>
             <Navbar></Navbar>
-            <div className="bg-[#edf0f2]">
+            <div className="bg-[#edf0f2] py-20">
                 <Outlet></Outlet>
             </div>
         </div>

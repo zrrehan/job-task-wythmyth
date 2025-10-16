@@ -32,7 +32,7 @@
         "options": [
             {
                 "name": "Membership Fee",
-                "paymentType": "Upfront",
+                "paymentType": "Upfront / Advance",
                 "installments": null,
                 "amount": 500.00
             },

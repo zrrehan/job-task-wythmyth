@@ -10,8 +10,8 @@ function Summary({modal}) {
     const navigate = useNavigate();
     if(!chosen) return null
     function paymentPress() {
-        const response = insertOnePayment(chosen)
         if(titlePayment) {
+            const response = insertOnePayment(chosen)
             navigate("/my-payment");
             Swal.fire({
                 title: "Payment Successful",

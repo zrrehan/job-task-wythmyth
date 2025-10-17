@@ -2,7 +2,7 @@ import Lottie from "lottie-react";
 import paymentAnimation from "../assets/lotties/Payments.json"
 import Swal from "sweetalert2";
 import { useEffect, useState } from "react";
-
+import { motion } from "motion/react";
 function MyPayments() {
     const [payments, setPayments] = useState(JSON.parse(localStorage.getItem("payment")) || []);
     useEffect(() => {
@@ -30,7 +30,12 @@ function MyPayments() {
         });
     }
     return(
-        <div className="flex justify-around">
+        <motion.div 
+            initial={{ opacity: 0, y: 50 }}  // start invisible, slightly lower
+            animate={{ opacity: 1, y: 0 }}   // animate to fully visible and original position
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 1, ease: "easeOut" }} // 1 second smooth fade-in
+            className="flex justify-around">
             <Lottie animationData={paymentAnimation} loop={true} className="h-[500px]"/>
             <div className="w-[800px]">
                 <button onClick={buttonClicked} className="btn w-full mb-10 bg-[#002077] text-white">Remove All Payment</button>
@@ -55,7 +60,7 @@ function MyPayments() {
                         : <h1 className="text-4xl text-center font-bold">There is no Payment in record</h1>
                 }
             </div>
-        </div>
+        </motion.div>
     )
 }
 

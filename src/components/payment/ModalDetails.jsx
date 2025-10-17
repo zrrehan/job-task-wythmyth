@@ -27,7 +27,7 @@ function ModalDetails() {
 
             <fieldset className="fieldset">
                 <legend className="fieldset-legend ">Additional Notes (Optional)</legend>
-                <textarea className="textarea w-full" placeholder="Bio"></textarea>
+                <textarea className="textarea w-full" placeholder="Write here..."></textarea>
             </fieldset>
         </div>
     )

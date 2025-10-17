@@ -7,3 +7,7 @@
   background-color: #002077;
   color: white;
 }
+
+a.active {
+  background-color: rgba(134, 134, 134, 0.416);
+}

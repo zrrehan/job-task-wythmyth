@@ -3,19 +3,28 @@ import { DataContext } from "../../Routes/Payment";
 import InstallMentBreakDown from "./component/InstallMentBreakDown";
 import { insertOnePayment } from "../../dummyBackend/dbConnect";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router";
 
 function Summary({modal}) {
-    const { chosen, processingFee, insertedData } = useContext(DataContext);
-    console.log(insertedData);
+    const { chosen, processingFee, insertedData, titlePayment } = useContext(DataContext);
+    const navigate = useNavigate();
     if(!chosen) return null
     function paymentPress() {
         const response = insertOnePayment(chosen)
-        console.log(response);
-        Swal.fire({
-            title: "Payment Successful",
-            text: response.message,
-            icon: response.status
-        });
+        if(titlePayment) {
+            navigate("/my-payment");
+            Swal.fire({
+                title: "Payment Successful",
+                text: response.message,
+                icon: response.status
+            });
+        } else {
+            Swal.fire({
+                title: "Select a Payment method",
+                icon: "warning"
+            });
+        }
+        
     }
 
     return(

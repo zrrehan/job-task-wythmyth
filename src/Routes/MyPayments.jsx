@@ -1,11 +1,13 @@
 import Lottie from "lottie-react";
 import paymentAnimation from "../assets/lotties/Payments.json"
 import Swal from "sweetalert2";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function MyPayments() {
     const [payments, setPayments] = useState(JSON.parse(localStorage.getItem("payment")) || []);
-    console.log(payments)
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });   
+    }, [])
     function buttonClicked() {
         Swal.fire({
             title: "Are you sure?",
@@ -16,9 +18,9 @@ function MyPayments() {
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete all!"
         }).then((result) => {
-            localStorage.setItem("payment", null);
-            setPayments([]);
             if (result.isConfirmed) {
+                localStorage.setItem("payment", null);
+                setPayments([]);
                 Swal.fire({
                     title: "Deleted!",
                     text: "Your file has been deleted.",

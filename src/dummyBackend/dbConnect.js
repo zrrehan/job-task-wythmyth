@@ -18,12 +18,13 @@ function insertOnePayment(body) {
     // let stringifyBody = JSON.stringify(body);
     // localStorage.setItem("payment", stringifyBody);
     let oldData = localStorage.getItem("payment");
-    if(!oldData) {
+    console.log(oldData == null || !oldData)
+    if(oldData == null || !oldData) {
         let stringifyBody = JSON.stringify([{ ...body, installmentProgress: 0}]);
         localStorage.setItem("payment", stringifyBody);
         return {message: "Payment Successful", status: "success"}
     }
-    oldData = JSON.parse(oldData)
+    oldData = JSON.parse(oldData) || [] 
     if(!findOnePayment(body.name)) {
         oldData.push(body);
         localStorage.setItem("payment", JSON.stringify(oldData));
@@ -49,6 +50,7 @@ function insertOnePayment(body) {
             }
         }
     }
+    return { message:`buggy`, status: "success" }
 
     
 }

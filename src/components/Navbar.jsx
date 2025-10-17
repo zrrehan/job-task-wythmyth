@@ -1,16 +1,17 @@
+import { Link } from "react-router";
 import logo from "../assets/logo.png"
 function Navbar() {
     const links = <>
-        <li><a>Home</a></li>
-        <li><a>Reunion</a></li>
-        <li><a>Members</a></li>
-        <li><a>Be a Member</a></li>
-        <li><a>Executives</a></li>
-        <li><a>Dubana Talk</a></li>
-        <li><a>Articles</a></li>
-        <li><a>Activity</a></li>
-        <li><a>Gallery</a></li>
-        <li><a>About Us</a></li>
+        <li><Link to = "/">Home</Link></li>
+        <li><Link to = "/my-payment">My Payment</Link></li>
+        <li><Link to = "/error">Members</Link></li>
+        <li><Link to = "/error">Be a Member</Link></li>
+        <li><Link to = "/error">Executives</Link></li>
+        <li><Link to = "/error">Dubana Talk</Link></li>
+        <li><Link to = "/error">Articles</Link></li>
+        <li><Link to = "/error">Activity</Link></li>
+        <li><Link to = "/error">Gallery</Link></li>
+        <li><Link to = "/error">About Us</Link></li>
     </>
     return(
         <div className="navbar bg-base-100 shadow-sm">

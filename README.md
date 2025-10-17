@@ -7,7 +7,7 @@ This project demonstrates clean React architecture, local data handling, and a r
 
 ## 🚀 Live Demo  
 🔗 [View Live Site](https://wythmyth-job-task-zrrehan.netlify.app/)  
-💻 [GitHub Repository](https://github.com/zrrehan/job-task-wythmyth)
+💻 [Youtube Description Link](https://www.youtube.com/watch?v=fanlr1Bo8gw)
 
 ---
 

@@ -11,9 +11,10 @@ function Payment({ dataPromise }) {
     const [chosen, setChosen] = useState(null);
     const [processingFee, setProcessingFee] = useState(0);
     const [titlePayment, setTitlePayment] = useState(null);
+    const [insertedData, setInsertedData] = useState(null);
 
     const value = {
-        chosen, setChosen, processingFee, setProcessingFee, titlePayment, setTitlePayment
+        chosen, setChosen, processingFee, setProcessingFee, titlePayment, setTitlePayment, insertedData, setInsertedData
     }
     return(
         <DataContext value={value}>

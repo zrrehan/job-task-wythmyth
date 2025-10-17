@@ -12,7 +12,7 @@ function SinglePaymentCard({data}) {
         setProcessingFee(data.processing_fee || 0)
         setTitlePayment(data.title)
     }
-    console.log(titlePayment)
+
     return(
         <div>
             <div

@@ -1,11 +1,23 @@
 import { useContext } from "react";
 import { DataContext } from "../../Routes/Payment";
 import InstallMentBreakDown from "./component/InstallMentBreakDown";
+import { insertOnePayment } from "../../dummyBackend/dbConnect";
+import Swal from "sweetalert2";
 
 function Summary({modal}) {
-    const {chosen, processingFee} = useContext(DataContext);
+    const { chosen, processingFee, insertedData } = useContext(DataContext);
+    console.log(insertedData);
     if(!chosen) return null
-    console.log(processingFee)
+    function paymentPress() {
+        const response = insertOnePayment(chosen)
+        console.log(response);
+        Swal.fire({
+            title: "Payment Successful",
+            text: response.message,
+            icon: response.status
+        });
+    }
+
     return(
         <div className="text-xl max-w-[1130px] bg-white mx-auto px-15 py-10 rounded-2xl">
             <h1 className="text-3xl font-semibold">3. Payment Summary</h1>
@@ -42,7 +54,7 @@ function Summary({modal}) {
             </div>
 
             {
-                !modal && <button className="btn w-full mt-5 bg-[#002077] text-white rounded-2xl">Pay Now</button>
+                !modal && <button onClick={paymentPress} className="btn w-full mt-5 bg-[#002077] text-white rounded-2xl">Pay Now</button>
             }
         </div>
     )

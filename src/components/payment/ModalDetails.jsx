@@ -4,7 +4,6 @@ import { useContext } from "react";
 import { DataContext } from "../../Routes/Payment";
 function ModalDetails() {
     const { chosen } = useContext(DataContext)
-    console.log(chosen)
     return(
         <div className="space-y-10">
             <div>

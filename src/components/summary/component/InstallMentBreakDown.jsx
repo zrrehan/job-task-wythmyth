@@ -1,18 +1,16 @@
+import { useContext, useEffect } from "react";
 import { findOnePayment } from "../../../dummyBackend/dbConnect"
+import { DataContext } from "../../../Routes/Payment";
 
 function InstallMentBreakDown({ chosen }) {
-    // console.log(chosen)
     let prevPayment = null;
     if(chosen?.installments) {
         prevPayment = findOnePayment(chosen.name);
     }
-
     const insertData = {
-        ...chosen, 
-        installmentProgress: prevPayment?.installmentProgress +1 || 1
+        ...chosen,
+        installmentProgress: prevPayment?.installmentProgress + 1 || 1
     }
-
-    console.log(insertData)
 
     return(
         <div className="">
@@ -22,7 +20,9 @@ function InstallMentBreakDown({ chosen }) {
 
             <div className="border border-primary bg-[#18d29750] p-2  rounded-2xl">
                 <p>Progress: {insertData.installmentProgress - 1}/{chosen.installments}</p>
-                <p>Next Installment {insertData.installmentProgress} of {chosen.installments}</p>
+                {
+                    insertData.installmentProgress-1 !== chosen.installments && <p>Next Installment {insertData.installmentProgress} of {chosen.installments}</p>
+                }
             </div>
         </div>
     )
